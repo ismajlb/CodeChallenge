@@ -58,9 +58,9 @@ public class TransactionService implements ITransactionService {
 
     private Double calculateFee(Double amount, String feeType) {
         if(feeType.trim().equals(TypesOfFees.FLAT_FEE.toString()))
-            return amount - 10;
+            return 10.0;
 
-        return amount - (amount * feePercentage/100);
+        return amount * (feePercentage/100);
 
     }
 
