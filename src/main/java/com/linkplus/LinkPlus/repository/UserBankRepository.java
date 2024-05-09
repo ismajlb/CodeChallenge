@@ -6,8 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserBankRepository extends JpaRepository<UserBank, Long> {
-
-    UserBank findByEmail(String email);
-
-    UserBank findByAccountAccountNumber(String accountNumber);
 }

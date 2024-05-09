@@ -1,8 +1,16 @@
 package com.linkplus.LinkPlus.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 import org.apache.catalina.User;
 
+@Entity
+@Table(name="Account")
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+@ToString
 public class Account {
 
     @Id
