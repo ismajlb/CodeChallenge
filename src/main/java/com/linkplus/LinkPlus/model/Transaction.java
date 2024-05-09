@@ -1,5 +1,6 @@
 package com.linkplus.LinkPlus.model;
 
+import com.linkplus.LinkPlus.model.enums.TypesOfFees;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,5 +28,11 @@ public class Transaction {
     private Account toAccount;
 
     @Column(nullable = false)
+    private Double amount;
+
+    @Column(nullable = false)
     private String reason;
+
+    @Enumerated(EnumType.STRING)
+    private TypesOfFees typesOfFees;
 }
