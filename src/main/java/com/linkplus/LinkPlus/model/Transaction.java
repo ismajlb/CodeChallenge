@@ -20,12 +20,10 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "From_Account")
-    @Column(nullable = false)
     private Account fromAccount;
 
     @ManyToOne
     @JoinColumn(name = "To_Account")
-    @Column(nullable = false)
     private Account toAccount;
 
     @Column(nullable = false)
