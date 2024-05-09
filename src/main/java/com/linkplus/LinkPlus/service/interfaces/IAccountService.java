@@ -6,7 +6,7 @@ import com.linkplus.LinkPlus.model.Account;
 public interface IAccountService {
 
     void addAccount(Long id, double balance);
-    void deposit(Long accountId, double ammount);
-    void withdraw(Account account);
+    void deposit(Long accountId, double amount);
+    void withdraw(Long accountId, double amount);
 
 }

@@ -43,7 +43,15 @@ public class AccountService implements IAccountService {
     }
 
     @Override
-    public void withdraw(Account account) {
+    public void withdraw(Long accountId, double amount) {
+        Account account = accountRepository.findById(accountId)
+                .orElseThrow(() -> new ResourceNotFoundException("Account not found!"));
 
+        if(amount <= 0)
+            throw new RuntimeException("Ammount cant be less or equals to 0!");
+
+        account.setBalance(account.getBalance() - amount);
+
+        accountRepository.save(account);
     }
 }
