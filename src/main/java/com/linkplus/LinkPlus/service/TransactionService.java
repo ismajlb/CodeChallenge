@@ -6,6 +6,7 @@ import com.linkplus.LinkPlus.model.Transaction;
 import com.linkplus.LinkPlus.model.enums.TypesOfFees;
 import com.linkplus.LinkPlus.repository.AccountRepository;
 import com.linkplus.LinkPlus.repository.TransactionRepository;
+import com.linkplus.LinkPlus.request.TransferRequest;
 import com.linkplus.LinkPlus.service.interfaces.ITransactionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,8 @@ public class TransactionService implements ITransactionService {
     private final AccountRepository accountRepository;
 
     private double feePercentage = 5.00;
+    public void moneyTransfer(TransferRequest TransferRequest) {
+    }
 
     @Override
     public void moneyTransfer(Long fromAccountId,
@@ -60,4 +63,6 @@ public class TransactionService implements ITransactionService {
         return amount - (amount * feePercentage/100);
 
     }
+
+
 }

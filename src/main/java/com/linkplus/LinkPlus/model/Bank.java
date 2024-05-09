@@ -11,7 +11,6 @@ import java.util.List;
 @AllArgsConstructor
 @Setter
 @Getter
-@ToString
 public class Bank {
 
     @Id

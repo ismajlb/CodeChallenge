@@ -10,7 +10,6 @@ import org.apache.catalina.User;
 @AllArgsConstructor
 @Setter
 @Getter
-@ToString
 public class Account {
 
     @Id
