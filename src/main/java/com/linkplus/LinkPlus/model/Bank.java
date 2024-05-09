@@ -1,7 +1,6 @@
 package com.linkplus.LinkPlus.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -15,8 +14,14 @@ import java.util.List;
 @ToString
 public class Bank {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String bankName;
+
+    @OneToMany(mappedBy = "bank")
     private List<Account> accounts;
+
     private double totalTransactionFeeAmount;
     private double totalTransferAmount;
     private double transactionFlatFeeAmount;

@@ -14,7 +14,7 @@ import org.apache.catalina.User;
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(unique = true)
     private String accountNumber;
