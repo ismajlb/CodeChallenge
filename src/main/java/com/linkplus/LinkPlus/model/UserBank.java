@@ -4,8 +4,10 @@ package com.linkplus.LinkPlus.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
-@Table(name="Books")
+@Table(name="UserBank")
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
@@ -20,4 +22,7 @@ public class UserBank {
     private String lastname;
     private String phoneNumber;
     private String email;
+
+    @OneToMany(mappedBy = "userBank")
+    private List<Account> Account;
 }
